@@ -11,7 +11,9 @@
 #import "XYLineLayout.h"
 #import "XYCircleLayout.h"
 
-@interface ViewController ()<UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+/** collectionView */
+@property (nonatomic, weak) UICollectionView *collectionView;
 /** 数据 */
 @property (nonatomic, strong) NSMutableArray *imageNames;
 @end
@@ -19,12 +21,13 @@
 @implementation ViewController
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 static NSString * const XYPhotoCellID = @"photo";
+static NSInteger const photoImagesCount = 20;
 
 - (NSMutableArray *)imageNames
 {
     if (!_imageNames) {
         _imageNames = [NSMutableArray array];
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < photoImagesCount; i++) {
             [_imageNames addObject:[NSString stringWithFormat:@"%zd", i + 1]];
         }
     }
@@ -35,18 +38,9 @@ static NSString * const XYPhotoCellID = @"photo";
     [super viewDidLoad];
     
     // 1.自定义流水布局
-    XYLineLayout *layout = ({
+    XYCircleLayout *layout = ({
         // 创建流水布局
-        XYLineLayout *layout = [[XYLineLayout alloc] init];
-        
-        // 设置尺寸
-        layout.itemSize = CGSizeMake(160, 160);
-        
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        CGFloat margin = (ScreenW - 160) * 0.5;
-        layout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin);
-        // 设置最小行间距
-        layout.minimumLineSpacing = 50;
+        XYCircleLayout *layout = [[XYCircleLayout alloc] init];
         
         layout;
     });
@@ -63,19 +57,35 @@ static NSString * const XYPhotoCellID = @"photo";
         
         // 设置数据源
         collectionView.dataSource = self;
+        // 设置代理
+        collectionView.delegate = self;
         
         collectionView;
         
     });
+    self.collectionView = collectionView;
     
     // 3.注册cell
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([XYPhotoCell class])  bundle:nil] forCellWithReuseIdentifier:XYPhotoCellID];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([self.collectionView.collectionViewLayout isKindOfClass:[XYLineLayout class]]) {
+        [self.collectionView setCollectionViewLayout:[[XYCircleLayout alloc] init] animated:YES];
+    } else {
+        XYLineLayout *layout = [[XYLineLayout alloc] init];
+        layout.itemSize = CGSizeMake(160, 160);
+        [self.collectionView setCollectionViewLayout:layout animated:YES];
+    }
+}
+
+
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return self.imageNames.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -86,5 +96,12 @@ static NSString * const XYPhotoCellID = @"photo";
     cell.image = self.imageNames[indexPath.item];
     
     return cell;
+}
+
+#pragma mark - <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.imageNames removeObjectAtIndex:indexPath.item];
+    [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 @end
