@@ -15,6 +15,10 @@
 		1C2D58251D71FCEA00519669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D58231D71FCEA00519669 /* LaunchScreen.storyboard */; };
 		1C2D58301D71FCEA00519669 /* photoAlbumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D582F1D71FCEA00519669 /* photoAlbumTests.m */; };
 		1C2D583B1D71FCEA00519669 /* photoAlbumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D583A1D71FCEA00519669 /* photoAlbumUITests.m */; };
+		1C2D584B1D71FE6500519669 /* XYPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D58491D71FE6500519669 /* XYPhotoCell.m */; };
+		1C2D584C1D71FE6500519669 /* XYPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D584A1D71FE6500519669 /* XYPhotoCell.xib */; };
+		1C2D584F1D71FE8D00519669 /* XYCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D584E1D71FE8D00519669 /* XYCircleLayout.m */; };
+		1C2D58521D71FEA100519669 /* XYLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D58511D71FEA100519669 /* XYLineLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		1C2D58361D71FCEA00519669 /* photoAlbumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photoAlbumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2D583A1D71FCEA00519669 /* photoAlbumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photoAlbumUITests.m; sourceTree = "<group>"; };
 		1C2D583C1D71FCEA00519669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C2D58481D71FE6500519669 /* XYPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPhotoCell.h; sourceTree = "<group>"; };
+		1C2D58491D71FE6500519669 /* XYPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPhotoCell.m; sourceTree = "<group>"; };
+		1C2D584A1D71FE6500519669 /* XYPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPhotoCell.xib; sourceTree = "<group>"; };
+		1C2D584D1D71FE8D00519669 /* XYCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCircleLayout.h; sourceTree = "<group>"; };
+		1C2D584E1D71FE8D00519669 /* XYCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCircleLayout.m; sourceTree = "<group>"; };
+		1C2D58501D71FEA100519669 /* XYLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLineLayout.h; sourceTree = "<group>"; };
+		1C2D58511D71FEA100519669 /* XYLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLineLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +114,13 @@
 			children = (
 				1C2D58181D71FCEA00519669 /* AppDelegate.h */,
 				1C2D58191D71FCEA00519669 /* AppDelegate.m */,
+				1C2D58481D71FE6500519669 /* XYPhotoCell.h */,
+				1C2D58491D71FE6500519669 /* XYPhotoCell.m */,
+				1C2D584A1D71FE6500519669 /* XYPhotoCell.xib */,
+				1C2D584D1D71FE8D00519669 /* XYCircleLayout.h */,
+				1C2D584E1D71FE8D00519669 /* XYCircleLayout.m */,
+				1C2D58501D71FEA100519669 /* XYLineLayout.h */,
+				1C2D58511D71FEA100519669 /* XYLineLayout.m */,
 				1C2D581B1D71FCEA00519669 /* ViewController.h */,
 				1C2D581C1D71FCEA00519669 /* ViewController.m */,
 				1C2D581E1D71FCEA00519669 /* Main.storyboard */,
@@ -202,6 +220,7 @@
 		1C2D580A1D71FCEA00519669 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XY;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = bruceyuan;
 				TargetAttributes = {
@@ -246,6 +265,7 @@
 				1C2D58251D71FCEA00519669 /* LaunchScreen.storyboard in Resources */,
 				1C2D58221D71FCEA00519669 /* Assets.xcassets in Resources */,
 				1C2D58201D71FCEA00519669 /* Main.storyboard in Resources */,
+				1C2D584C1D71FE6500519669 /* XYPhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +292,10 @@
 			files = (
 				1C2D581D1D71FCEA00519669 /* ViewController.m in Sources */,
 				1C2D581A1D71FCEA00519669 /* AppDelegate.m in Sources */,
+				1C2D584F1D71FE8D00519669 /* XYCircleLayout.m in Sources */,
 				1C2D58171D71FCEA00519669 /* main.m in Sources */,
+				1C2D58521D71FEA100519669 /* XYLineLayout.m in Sources */,
+				1C2D584B1D71FE6500519669 /* XYPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = photoAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bruceyuan.photoAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = photoAlbum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bruceyuan.photoAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
