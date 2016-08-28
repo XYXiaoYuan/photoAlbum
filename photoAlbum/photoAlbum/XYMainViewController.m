@@ -6,19 +6,19 @@
 //  Copyright © 2016年 bruceyuan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "XYMainViewController.h"
 #import "XYPhotoCell.h"
 #import "XYLineLayout.h"
 #import "XYCircleLayout.h"
 
-@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface XYMainViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 /** collectionView */
 @property (nonatomic, weak) UICollectionView *collectionView;
 /** 数据 */
 @property (nonatomic, strong) NSMutableArray *imageNames;
 @end
 
-@implementation ViewController
+@implementation XYMainViewController
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 static NSString * const XYPhotoCellID = @"photo";
 static NSInteger const photoImagesCount = 20;
@@ -90,11 +90,13 @@ static NSInteger const photoImagesCount = 20;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // 1.创建cell
     XYPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:XYPhotoCellID forIndexPath:indexPath];
     
+    // 2.给cell设置模型数据
     cell.image = self.imageNames[indexPath.item];
     
+    // 3.返回cell
     return cell;
 }
 

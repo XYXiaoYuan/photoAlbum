@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C2D58171D71FCEA00519669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D58161D71FCEA00519669 /* main.m */; };
-		1C2D581A1D71FCEA00519669 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D58191D71FCEA00519669 /* AppDelegate.m */; };
-		1C2D581D1D71FCEA00519669 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D581C1D71FCEA00519669 /* ViewController.m */; };
+		1C2D581A1D71FCEA00519669 /* XYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D58191D71FCEA00519669 /* XYAppDelegate.m */; };
+		1C2D581D1D71FCEA00519669 /* XYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D581C1D71FCEA00519669 /* XYMainViewController.m */; };
 		1C2D58201D71FCEA00519669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D581E1D71FCEA00519669 /* Main.storyboard */; };
 		1C2D58221D71FCEA00519669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D58211D71FCEA00519669 /* Assets.xcassets */; };
 		1C2D58251D71FCEA00519669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D58231D71FCEA00519669 /* LaunchScreen.storyboard */; };
@@ -41,10 +41,10 @@
 /* Begin PBXFileReference section */
 		1C2D58121D71FCEA00519669 /* photoAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2D58161D71FCEA00519669 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C2D58181D71FCEA00519669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C2D58191D71FCEA00519669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C2D581B1D71FCEA00519669 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C2D581C1D71FCEA00519669 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1C2D58181D71FCEA00519669 /* XYAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYAppDelegate.h; sourceTree = "<group>"; };
+		1C2D58191D71FCEA00519669 /* XYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYAppDelegate.m; sourceTree = "<group>"; };
+		1C2D581B1D71FCEA00519669 /* XYMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYMainViewController.h; sourceTree = "<group>"; };
+		1C2D581C1D71FCEA00519669 /* XYMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYMainViewController.m; sourceTree = "<group>"; };
 		1C2D581F1D71FCEA00519669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C2D58211D71FCEA00519669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C2D58241D71FCEA00519669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		1C2D58141D71FCEA00519669 /* photoAlbum */ = {
 			isa = PBXGroup;
 			children = (
-				1C2D58181D71FCEA00519669 /* AppDelegate.h */,
-				1C2D58191D71FCEA00519669 /* AppDelegate.m */,
+				1C2D58181D71FCEA00519669 /* XYAppDelegate.h */,
+				1C2D58191D71FCEA00519669 /* XYAppDelegate.m */,
 				1C2D58481D71FE6500519669 /* XYPhotoCell.h */,
 				1C2D58491D71FE6500519669 /* XYPhotoCell.m */,
 				1C2D584A1D71FE6500519669 /* XYPhotoCell.xib */,
@@ -121,8 +121,8 @@
 				1C2D584E1D71FE8D00519669 /* XYCircleLayout.m */,
 				1C2D58501D71FEA100519669 /* XYLineLayout.h */,
 				1C2D58511D71FEA100519669 /* XYLineLayout.m */,
-				1C2D581B1D71FCEA00519669 /* ViewController.h */,
-				1C2D581C1D71FCEA00519669 /* ViewController.m */,
+				1C2D581B1D71FCEA00519669 /* XYMainViewController.h */,
+				1C2D581C1D71FCEA00519669 /* XYMainViewController.m */,
 				1C2D581E1D71FCEA00519669 /* Main.storyboard */,
 				1C2D58211D71FCEA00519669 /* Assets.xcassets */,
 				1C2D58231D71FCEA00519669 /* LaunchScreen.storyboard */,
@@ -290,8 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2D581D1D71FCEA00519669 /* ViewController.m in Sources */,
-				1C2D581A1D71FCEA00519669 /* AppDelegate.m in Sources */,
+				1C2D581D1D71FCEA00519669 /* XYMainViewController.m in Sources */,
+				1C2D581A1D71FCEA00519669 /* XYAppDelegate.m in Sources */,
 				1C2D584F1D71FE8D00519669 /* XYCircleLayout.m in Sources */,
 				1C2D58171D71FCEA00519669 /* main.m in Sources */,
 				1C2D58521D71FEA100519669 /* XYLineLayout.m in Sources */,
@@ -521,6 +521,7 @@
 				1C2D58411D71FCEA00519669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2D58421D71FCEA00519669 /* Build configuration list for PBXNativeTarget "photoAlbumTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				1C2D58441D71FCEA00519669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2D58451D71FCEA00519669 /* Build configuration list for PBXNativeTarget "photoAlbumUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +539,7 @@
 				1C2D58471D71FCEA00519669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
